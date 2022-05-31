@@ -51,6 +51,8 @@
       <input type="search" name="search" id="search">
     </div>
     <div class="profile">
+      <button><img src="./images/bell-outline.svg" alt="" id="bell"></button>
+      <img src="./images/avatar-4.svg" alt="">
       <span>Morgan Oakley</span>
     </div>
     <div class="welcome">
@@ -134,5 +136,16 @@
     </div>
   </div>
 </body>
+
+<script>
+  let bellIcon = document.getElementById("bell");
+  bellIcon.addEventListener("click", ()=> {
+    if (bellIcon.getAttribute("src")==="./images/bell-outline.svg") {
+      bellIcon.setAttribute("src", "./images/bell-ring-outline.svg");
+    } else {
+      bellIcon.setAttribute("src", "./images/bell-outline.svg");
+    }
+  })
+</script>
 
 </html>
