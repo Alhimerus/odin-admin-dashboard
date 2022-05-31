@@ -24,8 +24,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 2fr 3fr;
-  justify-items: start;
-  align-items: start;
+  align-items: center;
   padding: 25px 50px 30px 40px;
 }
 
@@ -34,9 +33,27 @@ body {
   justify-self: end;
 }
 
-.header > .welcome,
-.header > .buttons {
-  align-self: end;
+#search {
+  padding: 3px 10px;
+  font-size: 22px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(200, 230, 230);
+  width: max(300px, 90%);
+}
+
+#search:focus {
+  outline: 2px solid rgb(20, 150, 210);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar img {
+  height: 30px;
 }
 
 .main-content {
