@@ -170,13 +170,35 @@
 
 <script>
   let bellIcon = document.getElementById("bell");
-  bellIcon.addEventListener("click", ()=> {
-    if (bellIcon.getAttribute("src")==="./images/bell-outline.svg") {
+  bellIcon.addEventListener("click", () => {
+    if (bellIcon.getAttribute("src") === "./images/bell-outline.svg") {
       bellIcon.setAttribute("src", "./images/bell-ring-outline.svg");
     } else {
       bellIcon.setAttribute("src", "./images/bell-outline.svg");
     }
   })
+
+  let favouriteIcon = document.getElementsByClassName("favourite");
+  for (let i = 0; i < favouriteIcon.length; i++) {
+    favouriteIcon[i].addEventListener("click", () => {
+      if (favouriteIcon[i].getAttribute("src") === "./images/star-plus-outline.svg") {
+      favouriteIcon[i].setAttribute("src", "./images/star-check-outline.svg");
+    } else {
+      favouriteIcon[i].setAttribute("src", "./images/star-plus-outline.svg");
+    }
+    })
+  }
+
+  let followIcon = document.getElementsByClassName("follow");
+  for (let i = 0; i < followIcon.length; i++) {
+    followIcon[i].addEventListener("click", () => {
+      if (followIcon[i].getAttribute("src") === "./images/eye-plus-outline.svg") {
+      followIcon[i].setAttribute("src", "./images/eye-check-outline.svg");
+    } else {
+      followIcon[i].setAttribute("src", "./images/eye-plus-outline.svg");
+    }
+    })
+  }
 </script>
 
 </html>
