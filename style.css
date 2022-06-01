@@ -152,6 +152,7 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto;
   padding: 30px 30px 50px 20px;
   background-color: rgb(225, 230, 240);
   font-size: 24px;
@@ -166,8 +167,8 @@ body {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: minmax(250px, 1fr);
   padding-top: 15px;
+  height: calc(100% - 44px);
 }
 
 .your-projects > .container > .card {
@@ -177,7 +178,7 @@ body {
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-rows: max-content max-content 1fr;
-  border-left: 12px solid #f0b429;
+  border-left: 12px solid rgb(240, 180, 40);
 }
 
 .container > .card > .title {
@@ -226,9 +227,53 @@ body {
 }
 
 .trending > .container {
+  background-color: rgb(255, 255, 255);
+  margin-top: 15px;
+  border-radius: 12px;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
   display: grid;
-  gap: 20px;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.trending > .container > .profile {
+  align-self: stretch;
+  display: grid;
   padding: 15px;
+  gap: 5px 15px;
+  grid-template-columns: max-content minmax(170px, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  font-size: 18px;
+}
+
+.trending > .container > .profile .title {
+  align-self: end;
+}
+
+.trending > .container > .profile .text {
+  align-self: start;
+}
+
+.trending .container img {
+  grid-area: 1 / 1 / 3 / 2;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.trending .container img.avatar-1 {
+  background-color: rgb(235, 150, 25);
+}
+
+.trending .container img.avatar-2 {
+  background-color: rgb(0, 210, 255);
+}
+
+.trending .container img.avatar-3 {
+  background-color: rgb(135, 65, 200);
+}
+
+.trending .container img.avatar-4 {
+  background-color: rgb(25, 210, 100);
 }
 
 .logo,
